@@ -145,6 +145,6 @@ This project is licensed under the GNU General Public License - see the LICENSE.
 * [Fayette Reynolds for the background image.](https://www.pexels.com/photo/cell-seen-under-microscope-11198505/)
 * [Bootstrap Template for Search Bar](https://bootstrapexamples.com/@anonymous/search-bar)
 * [Bootstrap Template for Error Page](https://bootstrapexamples.com/@valeria/404-page-template-2)
-* [Bootstrap Template for Tables](https://getbootstrap.com/docs/4.0/content/tables/)
+* [Modified Heroic Template used for base.html](https://github.com/startbootstrap/startbootstrap-heroic-features)
 * [Register and Login System](https://learndjango.com/tutorials/django-login-and-logout-tutorial
 )
