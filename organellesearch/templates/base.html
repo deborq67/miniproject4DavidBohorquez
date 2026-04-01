@@ -48,7 +48,11 @@
 
 
             <div class="rounded-3 text-center" style="background: linear-gradient(#e3b2f5, #1c4aa6);">
-                <img class="img-fluid mx-auto d-block" src="{% static 'OrganelleSearchFront.png' %}" style="padding: 10px;">                   {% block header %}{% endblock %}
+                <a href="{% url 'home' %}">
+                <img class="img-fluid mx-auto d-block" src="{% static 'OrganelleSearchFront.png' %}" style="padding: 10px;">
+                    {% block header %}
+                    {% endblock %}
+                </a>
             </div>
          </div>
       </header>
