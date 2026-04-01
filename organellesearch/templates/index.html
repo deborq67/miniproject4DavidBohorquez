@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Organelle Search{% endblock %}
+
+{% block search %}
+
+{% if user.is_authenticated %}
+<form method="post" action="{% url 'search' %}" class="d-flex">
+    {% csrf_token %}
+    <div class="input-group">
+        <input class="form-control" type="text" name="search_term" placeholder="Search organism..." aria-label="Search">
+        <button class="btn btn-primary px-4" type="submit">
+            <i class="bi bi-search"></i>
+        </button>
+    </div>
+</form>
+    <h2>Hi {{ user.email }}!</h2>
+
+{% else %}
+<div class="input-group mb-3">
+    <input class="form-control" type="text" placeholder="Search organism..." disabled>
+    <button class="btn btn-primary px-4" type="button" disabled>
+        <i class="bi bi-search"></i>
+    </button>
+</div>
+<h2>Log in or sign up to conduct your first search.</h2>
+{% endif %}
+
+{% endblock %}
