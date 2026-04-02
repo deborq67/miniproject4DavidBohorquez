@@ -45,14 +45,13 @@ def history_view(request):
     return render(request, "search/history.html", {"history": history})
 
 def export_to_csv(request):
-    # The only line to customize
     model_class = SearchResult
 
     meta = model_class._meta
-    field_names = [field.name for field in meta.fields]
+    field_names = ['accession','title','bp_length','updated','ambiguity_percentage']
 
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename={}.csv'.format(meta)
+    response['Content-Disposition'] = 'attachment; filename="organellesearch_results.csv"'.format(meta)
     writer = csv.writer(response)
 
     writer.writerow(field_names)
