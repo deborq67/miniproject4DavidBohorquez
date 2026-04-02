@@ -75,3 +75,12 @@ def export_history_to_csv(request):
 
     return response
 
+def download_results_page(request):
+    return render(request, "search/download.html", {
+        "download": "/results/download/"
+    })
+
+def download_history_page(request):
+    return render(request, "search/download.html", {
+        "download": "/history/download/"
+    })

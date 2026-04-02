@@ -3,7 +3,7 @@
 {% block header %}
   <h3 class="text-center">Results for: {{ organism }}</h3>
   <h3 class="text-center">Total Records Found: {{ total_records }}</h3>
-  <a href="{% url 'download' %}" class="btn btn-primary mb-3">Download Results</a>
+  <a href="{% url 'results_download_page' %}" class="btn btn-primary mb-3">Download Results</a>
     <br>
 {% endblock %}
 
