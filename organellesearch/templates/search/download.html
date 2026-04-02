@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+<div class="custom-bg text-dark">
+    <div class="d-flex align-items-center justify-content-center min-vh-100 px-2">
+        <div class="text-center">
+            <h1 class="display-1 fw-bold">Your download will begin shortly.</h1>
+            <p class="fs-2 fw-medium mt-4">Click on the logo to go to the home page.</p>
+            <a href="/" class="btn btn-light fw-semibold rounded-pill px-4 py-2 custom-btn">
+                New Search
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

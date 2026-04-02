@@ -3,7 +3,7 @@
 {% block header %}
   <h3 class="text-center">Results for: {{ organism }}</h3>
   <h3 class="text-center">Total Records Found: {{ total_records }}</h3>
-
+  <a href="{% url 'download' %}" class="btn btn-primary mb-3">Download Results</a>
     <br>
 {% endblock %}
 
@@ -12,6 +12,7 @@
 {% if total_records > 500 %}
   <p>NOTE: Due to the high amount of records, only the first 500 found are shown.</p>
 {% endif %}
+
 
 <div class="container">
   <table class="table table-striped table-hover">
