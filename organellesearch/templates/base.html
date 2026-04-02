@@ -39,7 +39,7 @@
                <div class="container-fluid justify-content-end">
                   <ul class="navbar-nav">
                     {% if user.is_authenticated %}
-                        <li class="nav-item"><span class="nav-link">{{ user.username }}</span></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'history' %}"><i class="fa fa-sign-in-alt"></i> History </a></li>
                     {% else %}
                         <li class="nav-item"><span class="nav-link">You are not logged in</span></li>
                     {% endif %}
