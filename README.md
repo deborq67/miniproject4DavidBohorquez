@@ -153,4 +153,4 @@ This project is licensed under the GNU General Public License - see the LICENSE.
 * [This Ernst Haeckel drawing for the logo: it's public domain.](https://pdimagearchive.org/images/b46b8d91-a0b4-4134-8268-1660285ab735/)
 * [Modified Heroic Template used for base.html](https://github.com/startbootstrap/startbootstrap-heroic-features)
 * [Register and Login System](https://learndjango.com/tutorials/django-login-and-logout-tutorial)
-* [Register and Login System](https://learndjango.com/tutorials/django-login-and-logout-tutorial)
+* [Bootstrap Navbar Documentation](https://getbootstrap.com/docs/4.0/components/navbar/#text)
