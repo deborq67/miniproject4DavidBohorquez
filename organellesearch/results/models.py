@@ -9,6 +9,10 @@ class SearchResult(models.Model):
     ambiguity_percentage = models.FloatField(null=True)
 
 class SearchHistory(models.Model):
+    class Meta:
+        #Correcting spelling on admin page.
+        verbose_name_plural = "Search Histories"
+    action = None
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     search_term = models.CharField(max_length=255)
     total_records = models.IntegerField()

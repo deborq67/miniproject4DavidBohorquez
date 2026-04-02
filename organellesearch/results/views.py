@@ -3,6 +3,8 @@ from .forms import SearchForm
 from .organelle_ambiguity import initiate_search
 from .models import SearchResult, SearchHistory
 from django.utils import timezone
+import csv
+from django.http import HttpResponse
 
 def search_view(request):
     if request.method == "POST":
@@ -41,3 +43,20 @@ def search_view(request):
 def history_view(request):
     history = SearchHistory.objects.filter(user=request.user).order_by("-searched_at")
     return render(request, "search/history.html", {"history": history})
+
+def export_to_csv(request):
+    # The only line to customize
+    model_class = SearchResult
+
+    meta = model_class._meta
+    field_names = [field.name for field in meta.fields]
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename={}.csv'.format(meta)
+    writer = csv.writer(response)
+
+    writer.writerow(field_names)
+    for obj in model_class.objects.all():
+        row = writer.writerow([getattr(obj, field) for field in field_names])
+
+    return response

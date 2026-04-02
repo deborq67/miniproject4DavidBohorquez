@@ -66,12 +66,17 @@ Need some ideas of what to search for? Try these organisms:
 
 ### History
 
-You may have noticed that to the right of `New Search` there is an option
+You may have noticed that at the end of the top black bar, there is an option that
 says `History`. As the name suggests, this button lets you view your entire
 search history including invalid results. It will also show the time stamp
 of when said search was executed. <br>
 
 ![OrganelleHistory.png](https://i.ibb.co/TqH77P7T/Organelle-History.png) <br>
+
+If you have a Django admin account, you can also visit the Django admin page to view, delete,
+and edit the search histories of users, including yours. Specifically, you can edit the amount
+of records found and the search term itself if you so choose.
+
 
 ## Getting Started
 
