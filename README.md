@@ -169,7 +169,7 @@ names in place.
  
 ## Version History
 
-* Released as organellebasedjango.zip.
+* v1.0: Released as organellebasedjango.zip.
  
 ## License
  
@@ -184,3 +184,4 @@ This project is licensed under the GNU General Public License - see the LICENSE.
 * [Modified Heroic Template used for base.html](https://github.com/startbootstrap/startbootstrap-heroic-features)
 * [Register and Login System](https://learndjango.com/tutorials/django-login-and-logout-tutorial)
 * [Bootstrap Navbar Documentation](https://getbootstrap.com/docs/4.0/components/navbar/#text)
+* [Bootstrap Modal Documentation](https://getbootstrap.com/docs/5.3/components/modal/)
