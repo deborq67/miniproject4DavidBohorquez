@@ -185,3 +185,4 @@ This project is licensed under the GNU General Public License - see the LICENSE.
 * [Register and Login System](https://learndjango.com/tutorials/django-login-and-logout-tutorial)
 * [Bootstrap Navbar Documentation](https://getbootstrap.com/docs/4.0/components/navbar/#text)
 * [Bootstrap Modal Documentation](https://getbootstrap.com/docs/5.3/components/modal/)
+* [Code for getting the download function working.](https://stackoverflow.com/questions/15029666/exporting-items-from-a-model-to-csv-django-python)
