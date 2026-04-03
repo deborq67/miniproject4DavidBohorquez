@@ -169,7 +169,7 @@ names in place.
  
 ## Version History
 
-* Released as organellebasedjango.zip.
+* v1.0: Released as organellebasedjango.zip.
  
 ## License
  
