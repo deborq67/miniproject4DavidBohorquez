@@ -114,10 +114,7 @@ and display history.
 python manage.py makemigrations
 python manage.py migrate
 ```
-* Finally, execute this line:
-```
-python manage.py runserver
-```
+
 Optionally, if you want access to the admin interface and also bypass the
 regular register system, you can also make an admin user by executing:
 
@@ -128,6 +125,10 @@ You will still be asked for an email using this method however.
 <br>
 <br>
 <br>
+Finally, execute this line:
+```
+python manage.py runserver
+```
 If all goes well, you should see an output of:
 ```
 Watching for file changes with StatReloader
