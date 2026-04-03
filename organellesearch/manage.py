@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+
+# INF601 - Advanced Programming in Python
+# David Bohorquez
+# Mini Project 4
+
 import os
 import sys
-
 
 def main():
     """Run administrative tasks."""
