@@ -8,7 +8,7 @@
 A Django version of the search engine that shows the most incomplete
 DNA records of organelle genomes from Genbank.<br>
 
-![OrganelleSearchHome.png](https://i.ibb.co/chVzX9zS/Organelle-Search-Home.png)
+![OrganelleSearchHome.png](https://i.ibb.co/whbXry0L/Organelle-Search-Home.png)
 
 ## Description
 
@@ -36,14 +36,16 @@ lengths are only a very small fraction of a complete organism's genome.
 ## How to Use
 
 To make a search, you *need to make an account with an email and password.*
-If you try and make a search without being logged in, you will automatically
-be redirected to the login page. Before doing any searches, click here on the `Register` button: <br>
+The search bar will not accept any input until you log in. Before doing any searches, click here on the `Register` button: <br>
 
-![OrganelleSearchHome.png](https://i.ibb.co/hJfzx0qB/Organelle-Register.png) <br>
+![OrganelleSearchHome.png](https://i.ibb.co/5gH0SmXP/Organelle-Search-Home.png) <br>
 
 You will be asked to put an email and a password. **Please put a valid email in here.** <br>
 
-After you make an account you can log in either manually or be redirected to log in via a search attempt.
+After you make an account, you will automatically be logged in and can initiate searches.
+
+Once you're logged in, you also have the ability to change your password in this new port. This option is located
+on the left side of the black bar.
 
 ### Searches
 
@@ -51,12 +53,11 @@ You can search any eukaryotic organism you want on this search engine. Be it a
 mushroom, a cat, or a potato you can see what results pop up. For maximum results,
 I highly suggest you use the scientific name of the organism you want to look up. <br>
 
-If you get no results, don't worry: you'll just get a page that tells you to start a new search. <br>
+If you get no results, you can always click on the header logo to start a new search. <br>
 
-![OrganelleResults.png](https://i.ibb.co/4nGDNNWv/Organelle-Results.png) <br>
+![OrganelleResults.png](https://i.ibb.co/zWc09ZJm/Organelle-Search-Result.png) <br>
 
-When you're done looking at the results, click the `New Search` button again
-to go back to the home page. <br>
+
 
 Need some ideas of what to search for? Try these organisms:
  * *Felis catus* - Domestic cat
@@ -68,15 +69,20 @@ Need some ideas of what to search for? Try these organisms:
 
 You may have noticed that at the end of the top black bar, there is an option that
 says `History`. As the name suggests, this button lets you view your entire
-search history including invalid results. It will also show the time stamp
+search history including results with no records. It will also show the time stamp
 of when said search was executed. <br>
 
-![OrganelleHistory.png](https://i.ibb.co/TqH77P7T/Organelle-History.png) <br>
+![OrganelleHistory.png](https://i.ibb.co/zVmGVrs6/Organelle-Base-History.png) <br>
 
 If you have a Django admin account, you can also visit the Django admin page to view, delete,
 and edit the search histories of users, including yours. Specifically, you can edit the amount
 of records found and the search term itself if you so choose.
 
+### Downloads
+
+New to the Django port, as you may have noticed from the above screenshots, is the ability to download both your 
+history and search results in a CSV format. Every time you try to download, you will always get a confirmation
+dialogue prompting you to confirm your choice. After confirming, you will be redirected to a download page.
 
 ## Getting Started
 
@@ -94,27 +100,44 @@ The next section will tell you how to install it.
 Due to the more complex nature of this project, a few extra steps will
 be needed to appropriately prepare the files. <br>
 
-First, download the `organellebaseflask.zip` and extract the `organellebaseflask`
-directory from it. *This will be the working directory you will execute Python from.*
+First, download the `organellebasedjango.zip` and extract the `organellebasedjango`
+directory from it. *Go to the `organellebase` folder inside it.*
 
 * From the directory, get all your dependencies by executing this line on Python:
 ```
 pip install -r requirements.txt
 ```
-* Afterwards, you must make the tables Organelle Search uses to display results and keep track of users. Execute this:
+* Afterwards, you must make the tables Organelle Search uses to display results, keep track of users,
+and display history.
+* Execute these commands:
 ```
-flask --app organellebaseflask init-db
+python manage.py makemigrations
+python manage.py migrate
 ```
 * Finally, execute this line:
 ```
-flask --app organellebaseflask 
+python manage.py runserver
 ```
+Optionally, if you want access to the admin interface and also bypass the
+regular register system, you can also make an admin user by executing:
+
+```
+python manage.py createsuperuser
+```
+You will still be asked for an email using this method however.
+<br>
+<br>
+<br>
 If all goes well, you should see an output of:
 ```
-* Serving Flask app 'organellebaseflask'
-* Debug mode: off
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
-* Running on http://127.0.0.1:5000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 03, 2026 - 04:22:17
+Django version 6.0.3, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
 ```
 Visit the address and the page should look like the first screenshot. You have
 successfully deployed Organelle Search on your own device!
@@ -133,13 +156,19 @@ can make is 3 per second. Same reason the maximum amount of results shown is 500
 This has already been accounted for in the script and a limit was placed so even if
 you misspell your email, you shouldn't be blocked. However, please try to put a valid email.
 
+* **Why are the CSV fields named differently from the table shown?**
+
+The CSV files and tables are both generated from the models themselves. The difference is that the tables 
+are set with a custom field to make it easier for a user to understand. The CSV leaves the unchanged model field
+names in place.
+
 ## Authors
  
 * David Bohorquez
  
 ## Version History
 
-* Released as organellebaseflask.zip.
+* Released as organellebasedjango.zip.
  
 ## License
  
