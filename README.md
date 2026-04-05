@@ -111,6 +111,7 @@ pip install -r requirements.txt
 and display history.
 * Execute these commands:
 ```
+cd ./organellesearch
 python manage.py makemigrations
 python manage.py migrate
 ```
